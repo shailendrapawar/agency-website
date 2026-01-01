@@ -10,6 +10,8 @@ import { useState } from "react";
 
 import { FaArrowRight } from "react-icons/fa6";
 
+import LOGO from "/public/tesseract-logo.png"
+
 const Navbar = () => {
 
     const { theme, toggleTheme } = useTheme();
@@ -25,8 +27,11 @@ const Navbar = () => {
         >
 
             <div className="h-full w-full max-w-300 flex justify-between items-center">
-                <span>
-                    My.Agency
+                <span className={"flex px-1 gap-1 items-center"}
+                style={{}}
+                >
+                    <img src={LOGO} className="h-10 w-10"></img>
+                    Tesser-<span className="font-semibold" style={{color:theme.primary}}>X</span>
                 </span>
 
                 {/* ==============mobile nav================ */}
@@ -60,7 +65,7 @@ const Navbar = () => {
                 </nav>
 
 
-                <section className="flex items-center justify-center gap-2">
+                <section className="flex items-center justify-center gap-5">
                     <div className="h-8 w-8 rounded-full flex justify-center items-center cursor-pointer"
                         onClick={() => toggleTheme()}
                         style={{
