@@ -13,11 +13,11 @@ const ScrollProvider = ({ children }) => {
 
     const scrollTo = (key) => {
         sections?.[key]?.current?.scrollIntoView({
-            behaviour: "smooth",
+            behavior: "smooth",
             block: "start"
         })
-
     }
+    
     return (
         <ScrollContext.Provider value={{ sections, scrollTo }}>
             {children}

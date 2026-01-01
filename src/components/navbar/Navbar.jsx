@@ -11,10 +11,12 @@ import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 import LOGO from "/public/tesseract-logo.png"
+import { useScroll } from "../../contexts/scroll/scrollContext";
 
 const Navbar = () => {
 
     const { theme, toggleTheme } = useTheme();
+    const { sections, scrollTo } = useScroll();
 
     const [mobileNav, toggleMobileNav] = useState(false)
     // console.log(theme);
@@ -44,23 +46,35 @@ const Navbar = () => {
                         onClick={() => toggleMobileNav(false)}
                     />
 
-                    <section className=" list-none flex flex-col gap-5 py-2 px-2 text-lg absolute top-20 left-10">
-                        <li>Home</li>
-                        <li>Services</li>
-                        <li> Our Work</li>
-                        <li> Contact Us </li>
+                    <section className=" list-none flex flex-col gap-5 py-2 px-2 text-lg absolute top-20 left-10 cursor-pointer"
+                        onClick={(e) => {
+                            const key = e.target.getAttribute("data-name");
+                            scrollTo(key)
+                            toggleMobileNav(false)
+                        }}
+                    >
+                        <li data-name={"home"} className="hover:underline">Home</li>
+                        <li data-name={"services"} className="hover:underline" >Services</li>
+                        <li data-name={"portfolio"} className="hover:underline"> Our Work</li>
+                        <li data-name={"contact"} className="hover:underline"> Contact Us </li>
                     </section>
                 </nav>)}
 
                 {/* ==================web nav============== */}
                 <nav className="hidden sm:flex">
                     <section className=" list-none font-semibold flex text-sm gap-5  cursor-pointer"
-                    // style={{borderBottom:` solid ${theme.border}`}}
+                        onClick={(e) => {
+                            // console.log(e)
+                            const key = e.target.getAttribute("data-name");
+                            // console.log(key)
+                            scrollTo(key)
+                            toggleMobileNav(false)
+                        }}
                     >
-                        <li className="hover:border-b-1  px-1" >Home</li>
-                        <li className=" hover:border-b-1  px-1">Services</li>
-                        <li className=" hover:border-b-1  px-1"> Our Work</li>
-                        <li className=" hover:border-b-1  px-1"> Contact Us </li>
+                        <li className="hover:border-b-1  px-1" data-name={"home"} >Home</li>
+                        <li className=" hover:border-b-1  px-1" data-name={"services"}>Services</li>
+                        <li className=" hover:border-b-1  px-1" data-name={"portfolio"}> Our Work</li>
+                        <li className=" hover:border-b-1  px-1" data-name={"contact"}> Contact Us </li>
                     </section>
                 </nav>
 
