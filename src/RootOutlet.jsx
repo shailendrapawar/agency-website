@@ -3,6 +3,7 @@ import { useTheme } from "./contexts/theme/themeContext"
 
 import Navbar from "./components/navbar/Navbar";
 import Landing from "./sections/landing/Landing";
+import Companies from "./sections/companies/Companies";
 
 const RootOutlet = () => {
 
@@ -21,6 +22,8 @@ const RootOutlet = () => {
 
             <section className="w-full min-h-screen  flex flex-col items-center">
                 <Landing/>
+
+                <Companies/>
 
             </section>
         </main>

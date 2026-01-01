@@ -8,7 +8,7 @@ export const lightTheme = {
     cardBorder: "#D9E1F0",
 
     textPrimary: "#181D1D",
-    textSecondary: "#87888F",
+    textSecondary: "#475569",
     textMuted: "#BCB1AE"
 }
 
