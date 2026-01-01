@@ -7,15 +7,13 @@ const ServiceCard = ({ data }) => {
     const { icon, title, description } = data
     const [hoverItem, setHoverItem] = useState(null);
 
-    console.log(hoverItem);
-
-
+    // console.log(hoverItem);
     return (
         <main className="w-full h-auto min-h-10 min-w-20 rounded-3xl transition-all ease-in-out relative"
             style={{
                 border: `2px solid ${theme.cardBorder}`,
-                backgroundColor: ( hoverItem!=null&&(hoverItem?.id==data?.id))?theme.cardBackground:theme.background,
-                boxShadow:`2px 2px 5px ${theme.cardBorder}`
+                backgroundColor: (hoverItem != null && (hoverItem?.id == data?.id)) ? theme.cardBackground : theme.background,
+                boxShadow: `2px 2px 5px ${theme.cardBorder}`
             }}
             onMouseEnter={() => {
                 setHoverItem(data)
@@ -31,7 +29,7 @@ const ServiceCard = ({ data }) => {
                         border: `5px solid ${theme.secondary}`
                     }}
                 >
-                    <span className={`h-full w-full rounded-full flex items-center justify-center p-3 ${hoverItem?.id==data?.id?"wiggle-hover":"animate-none"}`}
+                    <span className={`h-full w-full rounded-full flex items-center justify-center p-3 ${hoverItem?.id == data?.id ? "wiggle-hover" : "animate-none"}`}
                         style={{ color: theme.primary }}
                     >{icon}</span>
                 </section>

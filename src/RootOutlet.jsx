@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import Landing from "./sections/landing/Landing";
 import Companies from "./sections/companies/Companies";
 import Services from "./sections/services/Services";
+import { Portfolio } from "./sections/portfolio/Portfolio";
 
 const RootOutlet = () => {
 
@@ -27,6 +28,8 @@ const RootOutlet = () => {
                 <Companies/>
 
                 <Services/>
+
+                <Portfolio/>
 
             </section>
         </main>

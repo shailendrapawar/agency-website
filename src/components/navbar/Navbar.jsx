@@ -15,7 +15,7 @@ const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
 
     const [mobileNav, toggleMobileNav] = useState(false)
-    console.log(theme);
+    // console.log(theme);
 
     return (
         <nav className={"h-[60px] w-full  flex justify-center  px-5 backdrop-blur-xl sticky top-0 z-50"}
