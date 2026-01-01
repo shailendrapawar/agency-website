@@ -2,13 +2,16 @@ import { useTheme } from "../../contexts/theme/themeContext"
 import { MdOutlineEmail } from "react-icons/md";
 import { FaUserAlt } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useScroll } from "../../contexts/scroll/scrollContext";
 
 const Contact = () => {
 
     const { theme } = useTheme();
+    const{sections}=useScroll();
+
 
     return (
-        <main className="container w-full h-auto  flex justify-center items-center relative mt-5">
+        <main className="container w-full h-auto  flex justify-center items-center relative mt-5" ref={sections.contact}>
             <section className={`inner-container h-full w-full  py-2 px-2 md:pt-10  max-w-250  flex flex-col  items-center justify-between gap-2 md:gap-8 relative  z-10`}>
 
                 <h3 className="text-2xl md:text-4xl font-semibold" style={{ color: theme.textPrimary }}>Reach out to us.</h3>

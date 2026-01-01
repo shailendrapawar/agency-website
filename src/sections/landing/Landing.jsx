@@ -4,12 +4,16 @@ import heroLandingImg from "/public/hero-landing-img.jpg"
 import blueWaterBg from "/public/blue-water-drop-bg.jpg"
 import pinkWaterBg from "/public/pink-water-drop-bg.jpg"
 import usersList from "/public/users.svg"
+import { useScroll } from "../../contexts/scroll/scrollContext"
 const Landing = () => {
 
   const { theme } = useTheme()
+  const{sections}=useScroll()
 
+  // console.log(sections) 
+  
   return (
-    <main className="container w-full min-h-[calc(100vh-100px)]  flex justify-center items-center relative">
+    <main className="container w-full min-h-[calc(100vh-100px)]  flex justify-center items-center relative" ref={sections.home}>
 
       <section className={`inner-container h-full w-full px-2 py-10 md:pt-20  max-w-250  flex flex-col justify-center items-center gap-5 md:gap-8 relative  z-10 ${theme.name == "light" ? "backdrop-blur-3xl" : "backdrop-blur-[150px]"}`}>
 
