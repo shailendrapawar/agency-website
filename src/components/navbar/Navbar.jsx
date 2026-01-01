@@ -18,9 +18,9 @@ const Navbar = () => {
     console.log(theme);
 
     return (
-        <nav className={"h-[60px] w-full bg-red-500 flex justify-center  px-5 backdrop-blur-xl bg-transparent sticky top-0"}
+        <nav className={"h-[60px] w-full  flex justify-center  px-5 backdrop-blur-xl sticky top-0 z-50"}
             style={{
-                backgroundColor:theme.secondary
+                backgroundColor: theme.secondary + `50`,
             }}
         >
 

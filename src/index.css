@@ -23,12 +23,12 @@
   /* text-align: center; */
   
 }
-#root::-webkit-scrollbar {
+:root::-webkit-scrollbar {
   display: none;               /* Chrome, Safari */
 }
 
 .hide-scrollbar {
-  overflow: auto;              /* or scroll */
+  /* overflow: auto;              or scroll */
   scrollbar-width: none;       /* Firefox */
   -ms-overflow-style: none;    /* IE / Edge */
 }

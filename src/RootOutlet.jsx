@@ -19,7 +19,7 @@ const RootOutlet = () => {
         >
             <Navbar />
 
-            <section className="w-full h-screen bg-green-400 flex flex-col items-center">
+            <section className="w-full min-h-screen  flex flex-col items-center">
                 <Landing/>
 
             </section>
