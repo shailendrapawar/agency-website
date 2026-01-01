@@ -3,6 +3,7 @@ export const lightTheme = {
     primary: "#5044E5",
     secondary: "#D1D5DC",
     accent: "#ad46ff",
+    
     background: "#F5F2FA",
     cardBackground: "#FEFEFE",
     cardBorder: "#D9E1F0",

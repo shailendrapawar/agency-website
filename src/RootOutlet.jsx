@@ -4,11 +4,12 @@ import { useTheme } from "./contexts/theme/themeContext"
 import Navbar from "./components/navbar/Navbar";
 import Landing from "./sections/landing/Landing";
 import Companies from "./sections/companies/Companies";
+import Services from "./sections/services/Services";
 
 const RootOutlet = () => {
 
     const { theme, toggleTheme } = useTheme();
-    console.log(theme);
+    // console.log(theme);
 
     return (
         <main
@@ -24,6 +25,8 @@ const RootOutlet = () => {
                 <Landing/>
 
                 <Companies/>
+
+                <Services/>
 
             </section>
         </main>
