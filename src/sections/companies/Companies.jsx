@@ -4,11 +4,11 @@ import { useTheme } from "../../contexts/theme/themeContext"
 const Companies = () => {
 
     const[companies]=useState([
-        {name:"Air-BNB",path:"/public/companies/airbnb_logo.svg"},
-        {name:"Google",path:"/public/companies/google_logo.svg"},
-        {name:"Microsoft",path:"/public/companies/microsoft_logo.svg"},
-        {name:"Rakuten",path:"/public/companies/rakuten_logo.svg"},
-        {name:"Zoom",path:"/public/companies/zoom_logo.svg"}
+        {name:"Air-BNB",path:"/companies/airbnb_logo.svg"},
+        {name:"Google",path:"/companies/google_logo.svg"},
+        {name:"Microsoft",path:"/companies/microsoft_logo.svg"},
+        {name:"Rakuten",path:"/companies/rakuten_logo.svg"},
+        {name:"Zoom",path:"/companies/zoom_logo.svg"}
     ])
 
     const{theme}=useTheme()
