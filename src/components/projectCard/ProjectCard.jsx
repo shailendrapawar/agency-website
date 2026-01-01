@@ -10,7 +10,7 @@ const ProjectCard = ({ data }) => {
         style={{
             border:`1px solid ${theme.cardBorder}`,
             backgroundColor:theme.cardBackground,
-            boxShadow:`2px 2px 5px ${theme.cardBorder}`
+            boxShadow:`1px 1px 3px ${theme.cardBorder}`
         }}
         >
             <img className="h-[70%] w-full object-contain bg-transparent rounded-xl"

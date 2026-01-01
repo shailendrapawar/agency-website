@@ -13,7 +13,7 @@ const ServiceCard = ({ data }) => {
             style={{
                 border: `2px solid ${theme.cardBorder}`,
                 backgroundColor: (hoverItem != null && (hoverItem?.id == data?.id)) ? theme.cardBackground : theme.background,
-                boxShadow: `2px 2px 5px ${theme.cardBorder}`
+                boxShadow: `1px 1px 3px ${theme.cardBorder}`
             }}
             onMouseEnter={() => {
                 setHoverItem(data)

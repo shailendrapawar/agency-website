@@ -8,15 +8,15 @@ const UserCard = ({ data }) => {
             style={{
                 border: `1px solid ${theme.cardBorder}`,
                 backgroundColor: theme.cardBackground,
-                boxShadow: `2px 2px 5px ${theme.cardBorder}`
+                boxShadow: `1px 1px 3px ${theme.cardBorder}`
             }}
         >
             <img className="h-20 w-20 bg-gray-500 object-cover  rounded-full"
                 src={data?.img}
             ></img>
             <span className="text-center">
-                <h3 className="font-semibold">{data?.name}</h3>
-                <span className="text-sm" style={{color:theme.textSecondary}}>{data?.designation}</span>
+                <h3 className="font-semibold text-sm">{data?.name}</h3>
+                <span className="text-xs" style={{color:theme.textSecondary}}>{data?.designation}</span>
             </span>
         </main>
     )

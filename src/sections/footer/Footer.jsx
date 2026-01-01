@@ -34,8 +34,8 @@ const Footer = () => {
                     <span className="text-sm " style={{ color: theme.textSecondary }}>The latest news, articles, and resources, sent to your inbox weekly.</span>
 
                     <div className="h-10 w-full flex  rounded-md  gap-5 mt-2">
-                        <input placeholder="Enter you email"
-                            className="h-full w-[80%] bg-transparent outline-none px-1 rounded-md text-sm"
+                        <input placeholder="Enter you email "
+                            className="h-full w-[80%] bg-transparent outline-none rounded-md text-sm px-2"
                             style={{
                                 color: theme.textSecondary,
                                 backgroundColor: theme.cardBackground,
@@ -44,7 +44,7 @@ const Footer = () => {
 
                             }}
                         ></input>
-                        <button className=" h-full w-[20%] min-w-20 text-sm text-white rounded-md flex items-center justify-center"
+                        <button className=" h-full w-[20%] min-w-20 text-sm hover:opacity-90 cursor-pointer text-white rounded-md flex items-center justify-center"
                             style={{
                                 backgroundColor: theme.primary
                             }}
@@ -54,21 +54,22 @@ const Footer = () => {
                     </div>
                 </section>
 
-                
+
             </main>
-            <div className="  w-[90%] mt-5" style={{
-                color:theme.textMuted,
-                border:`1px solid ${theme.textMuted}`
-                }}></div>
-            <section className="flex justify-between w-[90%] py-5 items-center flex-col md:flex-row gap-5" style={{color:theme.textSecondary}}>
+            <div className="w-[90%] mt-5" style={{
+                color: theme.textMuted,
+                border: `1px solid ${theme.textMuted}`
+            }}></div>
+
+            <aside className="flex justify-between w-[90%] py-5 items-center flex-col md:flex-row gap-5" style={{ color: theme.textSecondary }}>
                 <span className="text-sm h-10  flex justify-between items-center">Copyright 2026 © Shailendra pawar - All Right Reserved.</span>
                 <span className="h-10 w-auto flex gap-2  justify-between items-center">
-                    <FaInstagram className="h-6 w-6"/>
-                    <FaFacebookSquare className="h-6 w-6"/>
-                    <FaLinkedin className="h-6 w-6"/>
-                    <FaTwitterSquare className="h-6 w-6"/>
-                    </span>
-            </section>
+                    <FaInstagram className="h-6 w-6" />
+                    <FaFacebookSquare className="h-6 w-6" />
+                    <FaLinkedin className="h-6 w-6" />
+                    <FaTwitterSquare className="h-6 w-6" />
+                </span>
+            </aside>
         </footer>
     )
 }

@@ -28,10 +28,10 @@ const Navbar = () => {
 
             <div className="h-full w-full max-w-300 flex justify-between items-center">
                 <span className={"flex px-1 gap-1 items-center"}
-                style={{}}
+                    style={{}}
                 >
                     <img src={LOGO} className="h-10 w-10"></img>
-                    Tesser-<span className="font-semibold" style={{color:theme.primary}}>X</span>
+                    Tesser-<span className="font-semibold" style={{ color: theme.primary }}>X</span>
                 </span>
 
                 {/* ==============mobile nav================ */}
@@ -81,7 +81,7 @@ const Navbar = () => {
                         <CgMenuRight className="h-8 w-8 cursor-pointer sm:hidden" />
                     </span>
 
-                    <span className="h-10 w-30 text-white hidden md:flex  justify-center items-center gap-2 rounded-full"
+                    <span className="h-10 w-30 text-white text-sm hidden md:flex hover:opacity-90 cursor-pointer  justify-center items-center gap-2 rounded-full"
                         style={{
                             backgroundColor: theme.primary,
                         }}

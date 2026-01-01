@@ -27,7 +27,7 @@ const Landing = () => {
           <h1 className="text-3xl sm:text-6xl "><span style={{ color: theme.primary }}>digital</span> impact</h1>
         </div>
 
-        <h4 className="text-center sm:text-lg md:text-xl max-w-100"
+        <h4 className="text-center text-sm sm:text-lg md:text-xl max-w-100"
           style={{ color: theme.textSecondary }}
         >Creating meaningful connections and turning big ideas into interactive digital experiences.</h4>
 

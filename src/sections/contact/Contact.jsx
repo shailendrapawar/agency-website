@@ -23,7 +23,7 @@ const Contact = () => {
                             boxShadow: `1px 1px 3px ${theme.cardBorder}`
                         }}>
                         <FaUserAlt className="h-12 w-12 p-3" style={{ color: theme.textSecondary }} />
-                        <input placeholder="Enter you name" type="text" required className="h-full w-full text-sm bg-transparent outline-none px-1" style={{ color: theme.textSecondary }}></input>
+                        <input placeholder="Enter you name" type="text" required className="h-full w-full text-sm bg-transparent outline-none px-1" style={{ color: theme.textPrimary }}></input>
 
                     </div>
 
@@ -34,14 +34,14 @@ const Contact = () => {
                             boxShadow: `1px 1px 3px ${theme.cardBorder}`
                         }}>
                         <MdOutlineEmail className="h-12 w-12 p-2.5" style={{ color: theme.textSecondary }} />
-                        <input placeholder="Enter you email" type="email" required className="h-full w-full text-sm bg-transparent outline-none px-1" style={{ color: theme.textSecondary }}></input>
+                        <input placeholder="Enter you email" type="email" required className="h-full w-full text-sm bg-transparent outline-none px-1" style={{ color: theme.textPrimary}}></input>
 
                     </div>
 
                     <textarea className="h-30 w-full text-sm resize-none outline-none p-2 rounded-md col-span-2"
                         placeholder="Enter you message"
                         style={{
-                            color: theme.textSecondary,
+                            color: theme.textPrimary,
                             border: `1px solid ${theme.cardBorder}`,
                             backgroundColor: theme.cardBackground,
                             boxShadow: `1px 1px 3px ${theme.cardBorder}`
@@ -51,14 +51,13 @@ const Contact = () => {
                     </textarea>
 
                     <div className="w-full h-10 flex justify-end col-span-2">
-                        <button className=" h-full w-30 rounded-full text-white flex items-center justify-center gap-3"
+                        <button className=" h-full w-30 rounded-full text-white flex items-center hover:opacity-90 cursor-pointer justify-center gap-3"
                             style={{
                                 backgroundColor: theme.primary
                             }}
                         >
                             Submit <FaArrowRightLong />
                         </button>
-
                     </div>
 
                 </form>
