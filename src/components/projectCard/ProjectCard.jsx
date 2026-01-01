@@ -4,6 +4,7 @@ const ProjectCard = ({ data }) => {
 
     const { title, description, img } = data;
     const { theme } = useTheme()
+    
     return (
         <main className="w-full h-full p-2  rounded-xl hover:scale-101 transition-all ease-in-out"
         style={{

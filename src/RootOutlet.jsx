@@ -6,6 +6,7 @@ import Landing from "./sections/landing/Landing";
 import Companies from "./sections/companies/Companies";
 import Services from "./sections/services/Services";
 import { Portfolio } from "./sections/portfolio/Portfolio";
+import Team from "./sections/team/Team";
 
 const RootOutlet = () => {
 
@@ -30,6 +31,8 @@ const RootOutlet = () => {
                 <Services/>
 
                 <Portfolio/>
+
+                <Team/>
 
             </section>
         </main>
