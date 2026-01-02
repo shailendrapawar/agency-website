@@ -5,25 +5,27 @@ import blueWaterBg from "/public/blue-water-drop-bg.jpg"
 import pinkWaterBg from "/public/pink-water-drop-bg.jpg"
 import usersList from "/public/users.svg"
 import { useScroll } from "../../contexts/scroll/scrollContext"
+import useLazyLoader from "../../hooks/useLazyLoader"
 const Landing = () => {
 
   const { theme } = useTheme()
   const{sections}=useScroll()
+  const{isVisible,ref}=useLazyLoader(0.1)
 
   // console.log(sections) 
   
   return (
-    <main className="container w-full min-h-[calc(100vh-100px)]  flex justify-center items-center relative" ref={sections.home}>
+    <main className={`container ${isVisible==true?"opacity-100 slide-up":"opacity-0"} w-full min-h-[calc(100vh-100px)]  flex justify-center items-center relative`} ref={sections.home}>
 
-      <section className={`inner-container h-full w-full px-2 py-10 md:pt-20  max-w-250  flex flex-col justify-center items-center gap-5 md:gap-8 relative  z-10 ${theme.name == "light" ? "backdrop-blur-3xl" : "backdrop-blur-[150px]"}`}>
+      <section ref={ref} className={`inner-container h-full w-full px-2 py-10 md:pt-20  max-w-250  flex flex-col justify-center items-center gap-5 md:gap-8 relative  z-10 ${theme.name == "light" ? "backdrop-blur-3xl" : "backdrop-blur-[150px]"}`}>
 
-        <span className=" px-2 py-2 text-sm rounded-full gap-2 flex"
+        <span className={` px-2 py-2 text-sm rounded-full gap-2 flex`}
           style={{
             border: `2px solid ${theme.textMuted}`,
           }}
         >
           <img src={usersList}></img>
-          <span>Trusted by 10K+ pepole</span>
+          <span className="">Trusted by 10K+ pepole</span>
         </span>
 
         <div className="flex flex-col items-center text-center gap-2">

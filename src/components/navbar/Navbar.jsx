@@ -22,7 +22,7 @@ const Navbar = () => {
     // console.log(theme);
 
     return (
-        <nav className={"h-[60px] w-full  flex justify-center  px-5 backdrop-blur-xl sticky top-0 z-50"}
+        <nav className={"h-[60px] w-full  flex justify-center  px-5 backdrop-blur-xl sticky top-0 z-50 slide-down"}
             style={{
                 backgroundColor: theme.secondary + `50`,
             }}
@@ -62,11 +62,9 @@ const Navbar = () => {
 
                 {/* ==================web nav============== */}
                 <nav className="hidden sm:flex">
-                    <section className=" list-none font-semibold flex text-sm gap-5  cursor-pointer"
+                    <section className=" list-none flex text-sm  gap-5  cursor-pointer"
                         onClick={(e) => {
-                            // console.log(e)
                             const key = e.target.getAttribute("data-name");
-                            // console.log(key)
                             scrollTo(key)
                             toggleMobileNav(false)
                         }}

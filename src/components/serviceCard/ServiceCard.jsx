@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTheme } from "../../contexts/theme/themeContext"
 import "./serviceCard.css"
-const ServiceCard = ({ data }) => {
+const ServiceCard = ({ data,extraClasses }) => {
 
     const { theme } = useTheme();
     const { icon, title, description } = data
