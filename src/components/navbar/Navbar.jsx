@@ -53,10 +53,10 @@ const Navbar = () => {
                             toggleMobileNav(false)
                         }}
                     >
-                        <li data-name={"home"} className="hover:underline">Home</li>
-                        <li data-name={"services"} className="hover:underline" >Services</li>
-                        <li data-name={"portfolio"} className="hover:underline"> Our Work</li>
-                        <li data-name={"contact"} className="hover:underline"> Contact Us </li>
+                        <li data-name={"home"} className="hover:underline underline-offset-5">Home</li>
+                        <li data-name={"services"} className="hover:underline  underline-offset-5" >Services</li>
+                        <li data-name={"portfolio"} className="hover:underline  underline-offset-5"> Our Work</li>
+                        <li data-name={"contact"} className="hover:underline  underline-offset-5"> Contact Us </li>
                     </section>
                 </nav>)}
 
@@ -69,22 +69,22 @@ const Navbar = () => {
                             toggleMobileNav(false)
                         }}
                     >
-                        <li className="hover:border-b-1  px-1" data-name={"home"} >Home</li>
-                        <li className=" hover:border-b-1  px-1" data-name={"services"}>Services</li>
-                        <li className=" hover:border-b-1  px-1" data-name={"portfolio"}> Our Work</li>
-                        <li className=" hover:border-b-1  px-1" data-name={"contact"}> Contact Us </li>
+                        <li className="hover:underline underline-offset-5  px-1" data-name={"home"} >Home</li>
+                        <li className=" hover:underline underline-offset-5  px-1" data-name={"services"}>Services</li>
+                        <li className=" hover:underline underline-offset-5  px-1" data-name={"portfolio"}> Our Work</li>
+                        <li className=" hover:underline underline-offset-5  px-1" data-name={"contact"}> Contact Us </li>
                     </section>
                 </nav>
 
 
                 <section className="flex items-center justify-center gap-5">
-                    <div className="h-8 w-8 rounded-full flex justify-center items-center cursor-pointer"
+                    <div className="h-8 w-8 rounded-full  flex justify-center items-center cursor-pointer"
                         onClick={() => toggleTheme()}
                         style={{
-                            border: "2px solid "
+                            border: `2px solid `
                         }}
                     >
-                        {theme.name === "light" ? <FaRegMoon /> : <FiSun />}
+                        {theme.name === "light" ? <FaRegMoon className=" " /> : <FiSun className="" />}
                     </div>
 
                     <span
@@ -97,6 +97,7 @@ const Navbar = () => {
                         style={{
                             backgroundColor: theme.primary,
                         }}
+                        onClick={()=>scrollTo("contact")}
                     >
                         Connect<FaArrowRight />
                     </span>
