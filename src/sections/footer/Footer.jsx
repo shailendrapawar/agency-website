@@ -5,18 +5,22 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaTwitterSquare } from "react-icons/fa";
+import useLazyLoader from "../../hooks/useLazyLoader";
+import { useState } from "react";
 
 const Footer = () => {
     const { theme } = useTheme()
+    const { ref, isVisible } = useLazyLoader(0.5)
+    const [c]=useState(`${isVisible==true?"opacity-100 slide-up":"opacity-0"}`)
     return (
-        <footer className="container w-full h-auto  flex flex-col justify-center items-center relative mt-5"
+        <footer ref={ref} className={`${isVisible==true?"opacity-100 slide-up":"opacity-0"} container w-full h-auto  flex flex-col justify-center items-center relative mt-5`}
             style={{
                 backgroundColor: theme.cardBackground
             }}
         >
             <main className={`inner-container h-full w-full  py-5 px-2   max-w-250  flex flex-col md:flex-row  items-center justify-center gap-5 md:gap-8 relative  z-10`}>
 
-                <section className=" flex w-full flex-col md:w-[50%] h-35 sm:h-30 justify-center md:justify-evenly gap-1 px-2"
+                <section ref={ref} className={` ${isVisible==true?"opacity-100 slide-right":"opacity-0"} flex w-full flex-col md:w-[50%] h-35 sm:h-30 justify-center md:justify-evenly gap-1 px-2`}
                     style={{ color: theme.textSecondary }}
                 >
                     <span className={"flex px-1 gap-1 items-center font-semibold"}
@@ -29,7 +33,7 @@ const Footer = () => {
                     <span className="text-sm px-2">From strategy to execution, we craft digital solutions that move your business forward.</span>
                 </section>
 
-                <section className=" w-full h-35 sm:h-30 flex flex-col md:w-[50%]  justify-center gap-1 px-2">
+                <section ref={ref} className={` ${isVisible==true?"opacity-100 slide-left":"opacity-0"} w-full h-35 sm:h-30 flex flex-col md:w-[50%]  justify-center gap-1 px-2`}>
                     <span className="font-semibold">Subscribe to our newsletter</span>
                     <span className="text-sm " style={{ color: theme.textSecondary }}>The latest news, articles, and resources, sent to your inbox weekly.</span>
 

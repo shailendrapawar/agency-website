@@ -3,7 +3,7 @@ export const lightTheme = {
     primary: "#5044E5",
     secondary: "#D1D5DC",
     accent: "#ad46ff",
-    
+
     background: "#F5F2FA",
     cardBackground: "#FEFEFE",
     cardBorder: "#D9E1F0",
@@ -15,15 +15,16 @@ export const lightTheme = {
 
 export const darkTheme = {
     name: "dark",
-    primary: "#2b7fff",
-    secondary: "#101828",
-    accent: "#ad46ff",
 
-    background: "#000000",
-    cardBackground: "#101828",
-    cardborder: "#1E2939",
+    primary: "#3B82F6",
+    secondary: "#0A0A0A",
+    accent: "#AD46FF",
 
-    textPrimary: "#FFFFFF",
-    textSecondary: "#99A1AF",
-    textMuted: "#D1D5DC"
+    background: "#000000",     // true black
+    cardBackground: "#0B0B0F", // soft black
+    cardBorder: "#1F2937",     // subtle border
+
+    textPrimary: "#FAFAFA",
+    textSecondary: "#9CA3AF",
+    textMuted: "#6B7280",
 }

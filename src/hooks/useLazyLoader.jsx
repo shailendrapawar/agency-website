@@ -4,7 +4,7 @@ const useLazyLoader = (thresh) => {
     const ref = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const[threshold]=useState(thresh||0.5)
- 
+  
     useEffect(() => {
         if (!ref.current) return;
 

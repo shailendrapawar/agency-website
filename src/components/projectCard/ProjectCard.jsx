@@ -17,8 +17,8 @@ const ProjectCard = ({ data }) => {
                 src={img}
             ></img>
             <div className="flex flex-col justify-center gap-2 h-[30%] px-2">
-                <span className="font-semibold" style={{}}>{title}</span>
-                <p className="text-sm" style={{color:theme.textSecondary}}>{description}</p>
+                <span className="font-semibold text-sm" style={{}}>{title}</span>
+                <p className="text-xs" style={{color:theme.textSecondary}}>{description}</p>
 
             </div>
         </main>
